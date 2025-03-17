@@ -4,8 +4,6 @@ include "Koneksi.php";
 
 $query = "SELECT * FROM mahasiswa";
 $data = ambildata($query);
-
-
 ?>
 
 <!DOCTYPE html>
