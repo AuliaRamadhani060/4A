@@ -27,6 +27,7 @@ $data = ambildata($query);
                 <td>Tanggal lahir</td>
                 <td>Telpon</td>
                 <td>Email</td>
+                <td>Action</td>
             </tr>
         </thead>
         <tbody>
@@ -43,6 +44,10 @@ $data = ambildata($query);
                 <td><?= $d["TanggalLahir"] ?></td>
                 <td><?= $d["Telp"] ?></td>
                 <td><?= $d["Email"] ?></td>
+                <td>
+                    <a href="editmahasiswa.php?NIM=<?= $d["NIM"] ?>">Edit</a>
+                    <a href="hapusmahasiswa.php?NIM=<?= $d["NIM"] ?>">Hapus</a>
+                </td>
             </tr>
 
         <?php endforeach; ?>
