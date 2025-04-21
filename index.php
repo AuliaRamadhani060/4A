@@ -1,8 +1,9 @@
 <?php
 include "Koneksi.php";
 
-
-$query = "SELECT * FROM mahasiswa";
+$query = "SELECT mahasiswa.*, prodi.Nama AS ProdiNama 
+          FROM mahasiswa 
+          JOIN prodi ON mahasiswa.Id = prodi.Id";
 $data = ambildata($query);
 ?>
 
@@ -25,6 +26,7 @@ $data = ambildata($query);
                 <td>NIM</td>
                 <td>Nama</td>
                 <td>Tanggal lahir</td>
+                <td>Prodi</td>
                 <td>Telpon</td>
                 <td>Email</td>
                 <td>Action</td>
@@ -39,14 +41,16 @@ $data = ambildata($query);
 
             <tr>
                 <td><?php echo $i++; ?></td>
-                <td> <?= $d["NIM"] ?></td>
+                <td><?= $d["NIM"] ?></td>
                 <td><?= $d["Nama"] ?></td>
                 <td><?= $d["TanggalLahir"] ?></td>
+                <td><?= $d["ProdiNama"] ?></td>
                 <td><?= $d["Telp"] ?></td>
                 <td><?= $d["Email"] ?></td>
+                
                 <td>
-                    <a href="editmahasiswa.php?NIM=<?= $d["NIM"] ?>">Edit</a>
-                    <a href="hapusmahasiswa.php?NIM=<?= $d["NIM"] ?>">Hapus</a>
+                    <a href="editmahasiswa.php?NIM=<?= $d["NIM"] ?>">Edit</a> |
+                    <a href="hapusmahasiswa.php?NIM=<?= $d["NIM"]  ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a> 
                 </td>
             </tr>
 
