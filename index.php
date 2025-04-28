@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location: login.html");
+}
+
 include "Koneksi.php";
 
 $query = "SELECT mahasiswa.*, prodi.Nama AS ProdiNama 
@@ -58,5 +63,6 @@ $data = ambildata($query);
 
         </tbody>
     </table>
+    <a href="logout.php">Keluar</a>
 </body>
 </html>
