@@ -1,0 +1,107 @@
+body {
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.app-main {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding: 30px 0;
+}
+
+.card {
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    border: none;
+    background: #fff;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.18);
+}
+
+.card-header {
+    background: linear-gradient(90deg, #3498db 0%, #6dd5fa 100%);
+    color: #fff;
+    border-radius: 18px 18px 0 0 !important;
+    padding: 1.5rem 2rem;
+    border-bottom: none;
+}
+
+.card-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.btn-light {
+    background: #fff;
+    color: #3498db;
+    border: 1px solid #3498db;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-light:hover {
+    background: #3498db;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(52,152,219,0.15);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.table {
+    margin-bottom: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background: #f1f8fe;
+    color: #3498db;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid #3498db;
+    letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+    transition: background 0.2s;
+}
+
+.table tbody tr:hover {
+    background: #eaf6fb;
+}
+
+.breadcrumb {
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.breadcrumb-item a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active a {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .card-header {
+        padding: 1rem;
+    }
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Tambahkan di custom.css */
+.fa-sync-alt.fa-spin {
+    animation: fa-spin 1s infinite linear;
+}
+@keyframes fa-spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(359deg);}
+}

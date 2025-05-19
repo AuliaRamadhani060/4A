@@ -12,6 +12,8 @@ $data = mysqli_fetch_assoc($hasil);
 
 if (password_verify($password, $data['Password'])) {
     $_SESSION['login'] = true;
+    $_SESSION['Nama'] = $data['Nama'];
+    $_SESSION['foto'] = $data['foto'];
     header("Location: index.php");
 }else {
     header("Location: login.html");
